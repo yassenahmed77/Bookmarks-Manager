@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #eee;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+header h1{
+    margin: 0;
+}
+.container{
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+.container form{
+    background-color: white;
+    padding:15px;
+}
+.container form h2{
+    margin: 0 0 13px;
+}
+.container form .inputs input,.container form input.category{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 13px;
+    background-color: #eee;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    border: 1px solid #77777747;
+}
+/* Start Categories */
+.container form .categories{
+    background-color: #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.container form .categories span{
+    margin-right: 10px;
+    color:#2196f3;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+@media (max-width:480px) {
+    .container form .categories span{
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+.container form .categories p{
+    margin-bottom: 8px;
+}
+.container form button{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 8px;
+    transition: .3s;
+}
+/* End Categories */
+.container .show h3{
+    margin: 15px 0 10px;
+    font-size: 20px;
+}
+/* Start Displaying Bookmarks */
+.bookmarks .bookmark{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+/* Responsive All Bookmarks */
+@media (max-width:480px) {
+    .bookmarks .bookmark{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .bookmarks .bookmark .content{
+        flex-direction: column;
+        background-color: #eee;
+        padding: 10px 5vw;
+        border-radius: 9px;
+    }
+    .bookmarks .bookmark .content span{
+        margin-bottom: -25px;
+    }
+    .bookmarks .bookmark button{
+        width: 55%;
+    }
+}
+.bookmarks .bookmark .content{
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+.bookmarks span{
+    background-color: #eee;
+    padding: 5px;
+    display: block;
+    width: 100px;
+    border-radius: 6px;
+}
+.bookmarks a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    transition: .3s;
+}
+.bookmarks a:hover{
+    color: #e91e63;
+}
+.bookmarks button,.filter-content .filter-bookmark button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: white;
+    border-radius: 6px;
+    transition: .3s;
+}
+.bookmarks button:hover,.container form .categories span:hover,.filter-content .filter-bookmark button:hover{
+    opacity: .8;
+}
+/* End Displaying Bookmarks */
+/* Start Filtering Categories */
+div.show{
+    background-color: #ddd;
+    padding: 10px 5px;
+    margin: 20px 0;
+}
+.filter-categories{
+    margin-bottom: 10px;
+}
+.filter-categories span{
+    margin-right: 8px;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+.filter-categories span:hover{
+    background-color: #eeeeee70;
+}
+.filter-content .filter-bookmark{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.filter-content .filter-bookmark .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.filter-content .filter-bookmark .content span.num{
+    display: flex;
+    background-color: #eee;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.filter-content .filter-bookmark .content a{
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+/* End Filtering Categories */
