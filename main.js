@@ -21,6 +21,9 @@ function saveBookmark() {
     if(bookmarks[category].some(b => b.url === url || b.title === title)){
         alert("This Title Or Url Exists");
         return;
+    }else if (!/^https?:\/\/.+/.test(url)) {
+        alert("Invalid URL");
+        return;
     }
     bookmarks[category].push({title , url});
     localStorage.setItem("bookmark",JSON.stringify(bookmarks));
@@ -104,9 +107,9 @@ function filterBookmarksCategories(category){
 function deleteBookMark(category,index){
     let bookmarks = JSON.parse(localStorage.getItem("bookmark"));
     bookmarks[category].splice(index,1);
-    localStorage.setItem("bookmark",JSON.stringify(bookmarks));
     if(bookmarks[category].length === 0){
-    delete bookmarks[category];
+        delete bookmarks[category];
     }
+    localStorage.setItem("bookmark",JSON.stringify(bookmarks));
     displayBookMarks();
 }
